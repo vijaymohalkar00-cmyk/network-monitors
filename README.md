@@ -1,48 +1,24 @@
-# 🚀 Network Monitoring System
+#  Network Monitoring Dashboard
 
-## 📌 Description
-This project monitors network devices and checks whether they are UP or DOWN.  
-It stores logs in a MySQL database.
+A full-stack network monitoring system built using Python, MySQL, and Flask.
 
----
+##  Features
+- Ping monitoring (host status)
+- Port monitoring (open/closed)
+- MySQL database logging
+- Flask web dashboard
 
-## ⚙️ Features
-- Check server status (UP/DOWN)
-- Store logs in MySQL
-- Simple Python-based monitoring
+##  Dashboard
+Displays real-time status of servers with timestamps.
 
----
-
-## 🧱 Tech Stack
+## ⚙️ Tech Stack
 - Python
 - MySQL
-- Networking (Ping)
+- Flask
+- HTML
 
----
+## ▶️ Run Project
 
-## ▶️ How to Run
-
-### Step 1: Install dependencies
+```bash
 pip install -r requirements.txt
-
-### Step 2: Run project
-python monitor.py
-
----
-
-## 📁 Project Structure
-network-monitor/
-│
-├── monitor.py
-├── db.py
-├── config.py
-├── requirements.txt
-└── README.md
-
----
-
-## 💡 Future Improvements
-- Port scanning
-- Dashboard (Flask)
-- Email alerts
-- AWS deployment
+python app.py
