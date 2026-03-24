@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Monitoring Dashboard</title>
+
+    <!-- Auto Refresh every 5 seconds -->
+    <meta http-equiv="refresh" content="5">
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .up {
+            color: green;
+            font-weight: bold;
+        }
+
+        .down {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🚀 Network Monitoring Dashboard</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>IP Address</th>
+        <th>Status</th>
+        <th>Time</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+
+        <!-- Status color -->
+        <td class="{{ 'up' if row[2]=='UP' else 'down' }}">
+            {{ row[2] }}
+        </td>
+
+        <td>{{ row[3] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
